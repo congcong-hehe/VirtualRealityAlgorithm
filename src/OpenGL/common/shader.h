@@ -8,8 +8,10 @@ class Shader
 {
 public:
     Shader();
-    Shader(const std::string &vertexPath, const std::string& fragmentPath, const std::string& geometryPath);
-    void init(const std::string &vertexPath, const std::string& fragmentPath, const std::string& geometryPath);
+    ~Shader();
+    Shader(const std::string &vertexPath, const std::string& fragmentPath, const std::string& geometryPath = "");
+    Shader(const char* vertexPath, const char* fragmentPath, const char* geometryPath = nullptr);
+    void init(const char* vertexPath, const char* fragmentPath, const char* geometryPath = nullptr);
     inline void bind();
     inline void unbind();
     inline void setBool(const std::string& name, bool value) const;

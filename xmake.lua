@@ -6,7 +6,7 @@ target("VirtualRealityAlgorithm")
     set_kind("binary")
     add_files("src/OpenGL/common/*.cpp")
     add_files("src/OpenGL/common/*.c")
-    add_files("src/OpenGL/GeometryShader/*.cpp")
+    add_files("src/OpenGL/base/*.cpp")
 
     add_includedirs("third/include")
     add_linkdirs("third/lib")
